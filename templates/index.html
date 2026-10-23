@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Price Prediction</title>
+    <style>
+        body {
+            background-color: #202d36;
+            font-family: Arial;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .box {
+            background: #5c7896;
+            padding: 30px;
+            width: 300px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #7598b9;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #3c0007;
+            color: #f9f6f6;
+            border: none;
+            cursor: pointer;
+        }
+
+        h2 {
+            color: #929caa;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h1>🚗 Car Price Predictor</h1>
+
+    <form method="post">
+        <input type="number" name="year" placeholder="Enter Car Year" required>
+        <input type="number" name="km_driven" placeholder="Enter Kilometers Driven" required>
+        <button type="submit">Predict Price</button>
+    </form>
+
+    {% if prediction %}
+     <h3>Estimated price: ₹{{ prediction }}</h3>
+   {% endif %}
+</div>
+
+</body>
+</html>
